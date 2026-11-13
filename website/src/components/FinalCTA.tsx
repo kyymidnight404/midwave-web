@@ -1,5 +1,4 @@
 import { FinalCtaVisual } from "./GeometricVisuals";
-import { InviteButton } from "./InviteButton";
 
 export function FinalCTA() {
   return (
@@ -15,13 +14,6 @@ export function FinalCTA() {
           <p className="text-[#888888] text-sm sm:text-base max-w-lg leading-relaxed">
             Bring games, creativity, and AI to your server with Midwave.
           </p>
-          <div className="pt-2">
-            <InviteButton
-              label="ADD MIDWAVE TO DISCORD"
-              variant="primary"
-              showArrow
-            />
-          </div>
         </div>
 
         <div className="lg:col-span-5">

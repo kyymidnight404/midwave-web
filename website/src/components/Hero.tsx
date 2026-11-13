@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { HeroWireframeCanvas } from "./GeometricVisuals";
-import { InviteButton } from "./InviteButton";
 
 export function Hero() {
   return (
@@ -24,7 +23,6 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <InviteButton label="ADD TO DISCORD" variant="primary" />
             <Link
               href="#creative-tools"
               className="inline-flex items-center justify-center px-5 py-3 border border-[#252525] text-white font-mono text-xs uppercase tracking-wider hover:bg-[#1a1a1a] hover:border-white transition-colors"

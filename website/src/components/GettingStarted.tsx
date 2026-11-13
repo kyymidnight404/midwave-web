@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { OAUTH_SCOPES, REQUIRED_PERMISSIONS } from "@/lib/constants";
-import { InviteButton } from "./InviteButton";
 
 const STEPS = [
   {
@@ -90,7 +89,6 @@ export function GettingStarted() {
       </div>
 
       <div className="flex flex-wrap items-center gap-4">
-        <InviteButton label="ADD TO DISCORD" variant="primary" />
         <Link
           href="#commands"
           className="inline-flex items-center justify-center px-5 py-3 border border-[#252525] text-white font-mono text-xs uppercase tracking-wider hover:bg-[#1a1a1a] hover:border-white transition-colors"
