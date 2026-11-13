@@ -111,13 +111,25 @@ export function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="#getting-started"
-              onClick={handleNavClick}
-              className="sm:hidden col-span-2 flex items-center justify-center px-4 py-3 bg-white text-[#050505] font-mono text-xs font-semibold uppercase tracking-wider"
-            >
-              ADD TO DISCORD
-            </Link>
+            {SITE_CONFIG.discordInviteUrl ? (
+              <a
+                href={SITE_CONFIG.discordInviteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleNavClick}
+                className="sm:hidden col-span-2 flex items-center justify-center px-4 py-3 bg-white text-[#050505] font-mono text-xs font-semibold uppercase tracking-wider"
+              >
+                ADD TO DISCORD
+              </a>
+            ) : (
+              <Link
+                href="#getting-started"
+                onClick={handleNavClick}
+                className="sm:hidden col-span-2 flex items-center justify-center px-4 py-3 bg-white text-[#050505] font-mono text-xs font-semibold uppercase tracking-wider"
+              >
+                ADD TO DISCORD
+              </Link>
+            )}
           </div>
         </nav>
       )}

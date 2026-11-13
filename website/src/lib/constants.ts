@@ -3,7 +3,9 @@ export const SITE_CONFIG = {
   title: "MIDWAVE — Games, Creative Tools & AI for Discord",
   description:
     "Midwave is a multifunctional Discord entertainment bot featuring seven interactive mini-games, creative image utilities, and Google Gemini AI assistance.",
-  discordInviteUrl: process.env.NEXT_PUBLIC_DISCORD_INVITE_URL?.trim() || "",
+  discordInviteUrl:
+    process.env.NEXT_PUBLIC_DISCORD_INVITE_URL?.trim() ||
+    "https://discord.com/oauth2/authorize?client_id=1570491526675431424&permissions=117760&integration_type=0&scope=bot+applications.commands",
   discordSupportUrl: process.env.NEXT_PUBLIC_DISCORD_SUPPORT_URL?.trim() || "",
   githubUrl:
     process.env.NEXT_PUBLIC_GITHUB_URL?.trim() ||
