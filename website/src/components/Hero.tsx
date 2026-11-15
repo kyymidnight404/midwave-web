@@ -34,9 +34,11 @@ export function Hero() {
           <div className="pt-6 border-t border-dotted border-[#252525] flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-[#666666] uppercase tracking-wider">
             <span>07 MINI-GAMES</span>
             <span aria-hidden="true">·</span>
-            <span>02 CREATIVE UTILITIES</span>
+            <span>03 IMAGE GENERATORS</span>
             <span aria-hidden="true">·</span>
-            <span>GOOGLE GEMINI AI</span>
+            <span>MEDIA &amp; SOCIAL</span>
+            <span aria-hidden="true">·</span>
+            <span>GEMINI AI + SEARCH</span>
           </div>
         </div>
 

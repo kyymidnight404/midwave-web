@@ -9,8 +9,9 @@ export function Footer() {
           <div className="space-y-3">
             <div className="font-display text-lg text-white">MIDWAVE</div>
             <p className="text-xs text-[#888888] leading-relaxed max-w-xs">
-              Multifunctional Discord entertainment bot: seven mini-games, two
-              creative utilities, and stateless Google Gemini AI.
+              Multifunctional Discord entertainment bot: seven mini-games, three
+              image generators, media &amp; social utilities, and contextual
+              Google Gemini AI with web search.
             </p>
           </div>
 

@@ -12,7 +12,8 @@ export function CreativeTools() {
           CREATIVE TOOLS.
         </h2>
         <p className="text-[#888888] text-sm sm:text-base max-w-xl">
-          Two in-memory PNG image generators built directly into Discord channels.
+          Three in-memory PNG image generators plus media, lyrics, math, and
+          social utilities built directly into Discord channels.
         </p>
       </div>
 
@@ -47,13 +48,13 @@ export function CreativeTools() {
           <ul className="space-y-2 font-mono text-xs text-[#888888] border-t border-dotted border-[#252525] pt-4">
             <li>• Solid #FFFFFF background with #000000 lowercase type</li>
             <li>• Top-left aligned text with automatic sizing and wrapping</li>
-            <li>• Subtle soft lo-fi blur (max 100 characters)</li>
-            <li>• Rendered in memory with per-user cooldown protection</li>
+            <li>• Inline emoji support and subtle lo-fi blur (max 1,000 chars)</li>
+            <li>• Rendered in memory via resvg-js with per-user cooldown</li>
           </ul>
 
           <div className="flex flex-wrap gap-2 pt-2">
             <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-white">
-              /brat
+              /media brat
             </code>
             <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-white">
               !brat
@@ -128,6 +129,172 @@ export function CreativeTools() {
             <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-white">
               !igf
             </code>
+          </div>
+        </div>
+      </div>
+
+      {/* Product 3: QUOTED CHAT (QC) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-16 mt-16 border-t border-dotted border-[#252525]">
+        <div className="lg:col-span-7">
+          <div className="border border-[#252525] bg-[#101010] p-4 sm:p-6">
+            <div className="flex items-center justify-between font-mono text-[11px] text-[#666666] uppercase mb-4">
+              <span>PREVIEW // 1080 × 1080–4096 PNG</span>
+              <span>FILE: midwave-qc.png</span>
+            </div>
+
+            <div className="max-w-[380px] mx-auto bg-[#050505] border border-[#252525] p-6 space-y-4">
+              <div className="flex items-center justify-between font-mono text-[10px] text-[#666666] uppercase">
+                <span>WHATSAPP QUOTED CHAT</span>
+                <span>WIB // ASIA/JAKARTA</span>
+              </div>
+
+              <div className="border border-white/80 bg-[#141414] p-4 space-y-2">
+                <p className="font-sans text-sm text-white leading-relaxed">
+                  reply any message with !qc or right-click → Apps → Generate QC
+                </p>
+                <div className="flex items-center justify-end gap-2 font-mono text-[10px] text-[#888888]">
+                  <span>21:30</span>
+                  <span className="text-white">✓✓</span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2 pt-2 border-t border-dotted border-[#252525] font-mono text-[10px] text-[#666666] text-center">
+                <span className="py-1 border border-[#252525]">REPLY</span>
+                <span className="py-1 border border-[#252525]">COPY</span>
+                <span className="py-1 border border-[#252525]">PIN</span>
+                <span className="py-1 border border-[#252525]">FORWARD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="lg:col-span-5 space-y-5">
+          <div className="font-mono text-xs text-[#666666] uppercase tracking-widest">
+            TOOL 03 // QUOTED CHAT
+          </div>
+          <h3 className="font-display text-xl sm:text-2xl text-white uppercase">
+            QUOTED CHAT (QC)
+          </h3>
+          <p className="text-[#888888] text-sm sm:text-base leading-relaxed">
+            Turn any text or Discord message into a crisp WhatsApp-style Quoted
+            Chat screenshot PNG.
+          </p>
+
+          <ul className="space-y-2 font-mono text-xs text-[#888888] border-t border-dotted border-[#252525] pt-4">
+            <li>• Dynamic 1080px-wide canvas (1080–4096px tall)</li>
+            <li>• Works via text input, message reply, or Context Menu</li>
+            <li>• Local 3D iOS-style emoji assets &amp; Asia/Jakarta timestamps</li>
+            <li>• Supports up to 2,000 characters cleanly</li>
+          </ul>
+
+          <div className="flex flex-wrap gap-2 pt-2">
+            <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-white">
+              /media qc
+            </code>
+            <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-white">
+              !qc
+            </code>
+            <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-[#cccccc]">
+              Apps → Generate QC
+            </code>
+          </div>
+        </div>
+      </div>
+
+      {/* Media, Social & Utilities Grid */}
+      <div className="pt-16 mt-16 border-t border-dotted border-[#252525]">
+        <div className="space-y-2 mb-8">
+          <div className="font-mono text-xs text-[#666666] uppercase tracking-widest">
+            PLUS // MEDIA, SOCIAL &amp; UTILITIES
+          </div>
+          <h3 className="font-display text-xl sm:text-2xl text-white uppercase">
+            BEYOND IMAGE GENERATION.
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-[#252525] divide-y md:divide-y-0 md:divide-x divide-dotted divide-[#252525] bg-[#050505]">
+          <div className="p-6 space-y-3">
+            <div className="font-mono text-[11px] text-[#666666] uppercase">
+              01 // MEDIA DOWNLOADER
+            </div>
+            <h4 className="font-display text-base text-white uppercase">
+              IG &amp; TIKTOK DL
+            </h4>
+            <p className="text-xs text-[#888888] leading-relaxed">
+              Download public Instagram posts/reels and TikTok videos via
+              command or automatic chat link detection, with carousel support.
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                /media download
+              </code>
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                !dl
+              </code>
+            </div>
+          </div>
+
+          <div className="p-6 space-y-3">
+            <div className="font-mono text-[11px] text-[#666666] uppercase">
+              02 // LYRICS FINDER
+            </div>
+            <h4 className="font-display text-base text-white uppercase">
+              SONG LYRICS
+            </h4>
+            <p className="text-xs text-[#888888] leading-relaxed">
+              Fetch song lyrics with cover art and metadata via LRCLIB, iTunes,
+              and Genius with interactive paginated buttons.
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                /media lyrics
+              </code>
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                !lyrics
+              </code>
+            </div>
+          </div>
+
+          <div className="p-6 space-y-3">
+            <div className="font-mono text-[11px] text-[#666666] uppercase">
+              03 // SAFE CALCULATOR
+            </div>
+            <h4 className="font-display text-base text-white uppercase">
+              MATH EVALUATOR
+            </h4>
+            <p className="text-xs text-[#888888] leading-relaxed">
+              Evaluate arithmetic, trigonometry (rad &amp; deg), roots,
+              factorials, and constants safely without eval.
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                /math
+              </code>
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                !math
+              </code>
+            </div>
+          </div>
+
+          <div className="p-6 space-y-3">
+            <div className="font-mono text-[11px] text-[#666666] uppercase">
+              04 // OTAKUGIFS API
+            </div>
+            <h4 className="font-display text-base text-white uppercase">
+              10 SOCIAL GIFS
+            </h4>
+            <p className="text-xs text-[#888888] leading-relaxed">
+              Expressive anime GIF interactions: hug, pat, slap, bonk, poke,
+              yeet, highfive, wave, laugh, and cry.
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                /social
+              </code>
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                !hug
+              </code>
+            </div>
           </div>
         </div>
       </div>

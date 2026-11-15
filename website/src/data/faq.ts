@@ -9,7 +9,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "what-is-midwave",
     question: "What is Midwave?",
     answer:
-      "Midwave is a multifunctional Discord entertainment bot built with Node.js and discord.js. It combines seven interactive mini-games (Solo and 1v1 Multiplayer), two creative image utilities (/brat and !igf), and a stateless Google Gemini AI assistant (/ai and !ai) in one bot.",
+      "Midwave is a multifunctional Discord entertainment bot built with Node.js and discord.js. It combines seven interactive mini-games (Solo and 1v1 Multiplayer), three creative image generators (Brat, Quoted Chat QC, and Instagram Post Frame), Instagram/TikTok media downloading, a Lyrics Finder, a Safe Math evaluator, 10 social anime GIF actions, and contextual Google Gemini AI with selective Tavily Web Search.",
   },
   {
     id: "is-midwave-free",
@@ -45,13 +45,13 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "ai-memory",
     question: "Does Midwave AI remember previous conversations?",
     answer:
-      "No. Midwave AI (/ai and !ai) is strictly stateless. Every prompt is sent independently to the Google Gemini API without retaining conversation history, user transcripts, or cross-message context. An 8-second per-user cooldown and 1,500-character limit apply.",
+      "Midwave AI (/ai and !ai) uses ephemeral RAM-only short-term memory per user and channel (up to 10 messages with a 15-minute idle TTL), plus reply-chain context when using !ai. Nothing is saved to a database, and memory clears automatically after 15 minutes of inactivity or when the bot restarts. An 8-second cooldown and 1,500-character prompt limit apply.",
   },
   {
     id: "prefix-commands",
     question: "How do I use prefix commands?",
     answer:
-      "In addition to Discord Slash Commands (/), Midwave supports prefix commands using ! by default (for example: !games, !brat hello, !igf, !ai question, !ttt, !c4). For secret multiplayer choices in prefix mode, Midwave attempts to delete your message if Manage Messages is granted and confirms via DM.",
+      "In addition to Discord Slash Commands (/), Midwave supports prefix commands using ! by default (for example: !games, !brat hello, !qc text, !igf, !dl <url>, !lyrics <song>, !math 2+2, !hug @user, !ai question, !ttt, !c4). For secret multiplayer choices in prefix mode, Midwave attempts to delete your message if Manage Messages is granted and confirms via DM.",
   },
   {
     id: "command-not-working",

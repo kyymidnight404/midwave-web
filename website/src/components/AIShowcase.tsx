@@ -26,7 +26,10 @@ export function AIShowcase() {
               !ai
             </code>
             <span className="px-3 py-1.5 bg-[#050505] border border-[#252525] font-mono text-xs text-[#888888]">
-              GOOGLE GEMINI API
+              GEMINI 2.5 FLASH
+            </span>
+            <span className="px-3 py-1.5 bg-[#050505] border border-[#252525] font-mono text-xs text-[#888888]">
+              TAVILY WEB SEARCH
             </span>
           </div>
 
@@ -37,10 +40,10 @@ export function AIShowcase() {
               OPERATING CHARACTERISTICS
             </div>
             <ul className="space-y-1.5">
-              <li>• Each request is processed independently</li>
-              <li>• Strictly stateless — no conversation history stored</li>
-              <li>• Per-user cooldowns (8s) and 1,500-char prompt limit apply</li>
-              <li>• Supports Indonesian and other languages</li>
+              <li>• RAM-only short-term memory (15m idle TTL, up to 10 messages)</li>
+              <li>• Selective Tavily Web Search for real-time news &amp; updates</li>
+              <li>• Grounded with Global Bot Knowledge (RAG) &amp; reply context</li>
+              <li>• 8s cooldown, 1,500-char limit, zero database persistence</li>
             </ul>
           </div>
         </div>
@@ -49,7 +52,7 @@ export function AIShowcase() {
           <div className="border border-[#252525] bg-[#050505]">
             <div className="px-4 py-3 bg-[#101010] border-b border-[#252525] flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
               <span className="text-white">DISCORD // #general</span>
-              <span className="text-[#666666]">STATELESS GEMINI REQUEST</span>
+              <span className="text-[#666666]">CONTEXTUAL GEMINI + WEB SEARCH</span>
             </div>
 
             <div className="p-6 space-y-6 font-mono text-xs sm:text-sm">
@@ -88,7 +91,7 @@ const maxAttempts = 8;
               </div>
 
               <div className="pt-4 border-t border-dotted border-[#252525] flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#666666] uppercase">
-                <span>HISTORY: NONE (INDEPENDENT PROMPT)</span>
+                <span>MEMORY: 15M RAM TTL (10 MSGS)</span>
                 <span>COOLDOWN: 8S / USER</span>
               </div>
             </div>
