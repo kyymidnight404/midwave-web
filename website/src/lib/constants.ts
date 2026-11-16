@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
     "Midwave is a multifunctional Discord entertainment bot featuring four interactive mini-games, three creative image generators, BMKG Indonesia weather forecasts, media downloader & lyrics finder, safe math, 11 social GIFs, and contextual Google Gemini AI with web search.",
   discordInviteUrl:
     process.env.NEXT_PUBLIC_DISCORD_INVITE_URL?.trim() ||
-    "https://discord.com/oauth2/authorize?client_id=1570491526675431424&permissions=268561472&integration_type=0&scope=bot+applications.commands",
+    "https://discord.com/oauth2/authorize?client_id=1570491526675431424",
   discordSupportUrl: process.env.NEXT_PUBLIC_DISCORD_SUPPORT_URL?.trim() || "",
   githubUrl:
     process.env.NEXT_PUBLIC_GITHUB_URL?.trim() ||
