@@ -19,7 +19,8 @@ export function Hero() {
           </h1>
 
           <p className="text-[#888888] text-base sm:text-lg leading-relaxed max-w-xl">
-            Games, creative tools, and AI assistance built into one Discord bot.
+            Games, creative tools, BMKG Indonesia weather, and AI assistance
+            built into one Discord bot.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -32,11 +33,11 @@ export function Hero() {
           </div>
 
           <div className="pt-6 border-t border-dotted border-[#252525] flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-[#666666] uppercase tracking-wider">
-            <span>07 MINI-GAMES</span>
+            <span>04 MINI-GAMES</span>
             <span aria-hidden="true">·</span>
             <span>03 IMAGE GENERATORS</span>
             <span aria-hidden="true">·</span>
-            <span>MEDIA &amp; SOCIAL</span>
+            <span>BMKG WEATHER &amp; MEDIA</span>
             <span aria-hidden="true">·</span>
             <span>GEMINI AI + SEARCH</span>
           </div>

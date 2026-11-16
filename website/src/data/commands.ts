@@ -21,93 +21,52 @@ export interface CommandEntry {
 export const COMMANDS: CommandEntry[] = [
   // GAMES
   {
-    id: "guess",
-    name: "Number Guessing",
+    id: "coinflip",
+    name: "Coin Flip",
     category: "Games",
-    slashCommand: "/game solo game:guess",
-    prefixCommand: "!guess",
+    slashCommand: null,
+    prefixCommand: "!coinflip",
     description:
-      "Start a solo or 1v1 number guessing match with Easy (1–50), Normal (1–100), or Hard (1–200) ranges, then submit guesses.",
-    slashExample:
-      "/game solo game:guess difficulty:normal  •  /game answer answer:42",
-    prefixExample: "!guess normal  •  !guess @user hard  •  !guess 42",
-    notes: "Prefix alias: !ng",
+      "Flip a coin solo using Heads/Tails buttons or challenge a friend with Accept/Reject and secret choice buttons.",
+    slashExample: null,
+    prefixExample: "!coinflip  •  !cf heads  •  !cf @user",
+    notes: "Prefix alias: !cf • Zero points recorded",
   },
   {
     id: "rps",
     name: "Rock Paper Scissors",
     category: "Games",
-    slashCommand: "/game solo game:rps",
+    slashCommand: null,
     prefixCommand: "!rps",
     description:
-      "Play Rock Paper Scissors solo against Midwave or challenge an opponent with secret choices.",
-    slashExample:
-      "/game challenge game:rps opponent:@user  •  /game choose choice:rock",
-    prefixExample: "!rps rock  •  !rps challenge @user  •  !rps choose paper",
-    notes: "Supports English & Indonesian (batu/kertas/gunting) in prefix mode",
-  },
-  {
-    id: "trivia",
-    name: "Trivia Quiz",
-    category: "Games",
-    slashCommand: "/game solo game:trivia",
-    prefixCommand: "!trivia",
-    description:
-      "Launch a 5-round trivia match (20s/round) from 90 curated questions across 6 categories and 3 difficulties.",
-    slashExample:
-      "/game solo game:trivia category:science difficulty:normal  •  /game answer answer:B",
-    prefixExample: "!trivia science normal  •  !trivia @user  •  !trivia B",
-  },
-  {
-    id: "coinflip",
-    name: "Coin Flip",
-    category: "Games",
-    slashCommand: "/game solo game:coinflip",
-    prefixCommand: "!coinflip",
-    description:
-      "Predict Heads or Tails in solo mode or lock in secret 1v1 multiplayer predictions.",
-    slashExample:
-      "/game challenge game:coinflip opponent:@user  •  /game choose choice:heads",
-    prefixExample: "!cf heads  •  !cf challenge @user  •  !cf choose tails",
-    notes: "Prefix alias: !cf",
-  },
-  {
-    id: "dice",
-    name: "Dice Rolling",
-    category: "Games",
-    slashCommand: "/game solo game:dice",
-    prefixCommand: "!dice",
-    description:
-      "Roll 1–10 dice with 2–100 sides per die (default 1d6) solo or in a 1v1 roll-off.",
-    slashExample:
-      "/game solo game:dice count:2 sides:6  •  /game challenge game:dice opponent:@user",
-    prefixExample: "!dice 2d6  •  !dice @user 2d6",
+      "Play instant solo Rock Paper Scissors or a Best-of-3 1v1 match using interactive secret choice buttons.",
+    slashExample: null,
+    prefixExample: "!rps rock  •  !rps batu  •  !rps @user",
+    notes: "Supports English & Indonesian choices • Best of 3 in 1v1 • Zero points",
   },
   {
     id: "tictactoe",
     name: "Tic Tac Toe",
     category: "Games",
-    slashCommand: "/game solo game:tictactoe",
+    slashCommand: null,
     prefixCommand: "!tictactoe",
     description:
-      "Play a 3×3 grid match against Easy/Normal/Hard Minimax AI or a Discord friend.",
-    slashExample:
-      "/game solo game:tictactoe difficulty:hard  •  /game move position:B2",
-    prefixExample: "!ttt hard  •  !ttt challenge @user  •  !ttt B2",
-    notes: "Prefix alias: !ttt",
+      "Play an interactive 3×3 button grid match exclusively against another server friend (bot challenges blocked).",
+    slashExample: null,
+    prefixExample: "!ttt @user  •  !tictactoe @user",
+    notes: "Prefix alias: !ttt • Friends only (no bot/AI) • Zero points",
   },
   {
-    id: "connect4",
-    name: "Connect Four",
+    id: "quiz",
+    name: "Quiz Battle (Bahasa Indonesia)",
     category: "Games",
-    slashCommand: "/game solo game:connect4",
-    prefixCommand: "!connect4",
+    slashCommand: null,
+    prefixCommand: "!quiz",
     description:
-      "Drop discs into a 7×6 board against time-budgeted Alpha-Beta AI or challenge another player.",
-    slashExample:
-      "/game solo game:connect4 difficulty:normal  •  /game drop column:4",
-    prefixExample: "!c4 normal  •  !c4 challenge @user  •  !c4 4",
-    notes: "Prefix alias: !c4",
+      "Start a 10-round Indonesian quiz immediately (20s/round) across 90 questions; answer by typing a, b, c, or d directly in chat.",
+    slashExample: null,
+    prefixExample: "!quiz  •  !quiz science easy  •  (answer directly: a / b / c / d)",
+    notes: "No prefix needed to answer • Drop-in multiplayer • Zero bonus points",
   },
 
   // CREATIVE
@@ -119,7 +78,7 @@ export const COMMANDS: CommandEntry[] = [
     prefixCommand: "!brat",
     description:
       "Render a 1024×1024 white-background PNG with lowercase black typography, inline emojis, auto-wrapping, and subtle lo-fi blur.",
-    slashExample: "/media brat text:midwave in discord",
+    slashExample: "/media action:brat text:midwave in discord",
     prefixExample: "!brat midwave in discord",
     notes: "Max 1,000 characters • Inline emoji support",
   },
@@ -130,10 +89,10 @@ export const COMMANDS: CommandEntry[] = [
     slashCommand: "/media qc",
     prefixCommand: "!qc",
     description:
-      "Generate a WhatsApp-style Quoted Chat screenshot PNG (1080px wide) from text, a replied message, or the Discord Context Menu.",
-    slashExample: "/media qc text:hello from midwave",
+      "Generate a WhatsApp-style Quoted Chat screenshot PNG (1080px wide) from text input or by replying to any Discord message.",
+    slashExample: "/media action:qc text:hello from midwave",
     prefixExample: "!qc hello from midwave  •  (reply to any message with !qc)",
-    notes: "Max 2,000 chars • Also available via Right-Click → Apps → Generate QC",
+    notes: "Max 2,000 chars • Local iOS-style emoji reactions & Asia/Jakarta time",
   },
   {
     id: "igf",
@@ -169,7 +128,7 @@ export const COMMANDS: CommandEntry[] = [
     prefixCommand: "!download",
     description:
       "Download public Instagram (/p/, /reel/, /tv/) and TikTok photos or videos with carousel support and automatic chat link detection.",
-    slashExample: "/media download url:https://www.tiktok.com/...",
+    slashExample: "/media action:download url:https://www.tiktok.com/...",
     prefixExample: "!dl https://www.instagram.com/reel/...",
     notes: "Prefix alias: !dl • 10s cooldown • Auto-downloader active in chat",
   },
@@ -181,7 +140,7 @@ export const COMMANDS: CommandEntry[] = [
     prefixCommand: "!lyrics",
     description:
       "Search song lyrics with cover art and metadata via LRCLIB, iTunes, and Genius with interactive Previous/Next pagination.",
-    slashExample: "/media lyrics query:Love artist:wave to earth",
+    slashExample: "/media action:lyrics query:Love artist:wave to earth",
     prefixExample: "!lyrics Love | wave to earth",
     notes: "Prefix aliases: !lyric, !lirik • 5s cooldown",
   },
@@ -194,10 +153,10 @@ export const COMMANDS: CommandEntry[] = [
     slashCommand: "/social",
     prefixCommand: "!hug",
     description:
-      "Send expressive anime GIF interactions powered by OtakuGIFs: hug, pat, slap, bonk, poke, yeet, highfive, wave, laugh, and cry.",
+      "Send expressive anime GIF interactions powered by OtakuGIFs & nekos.best: hug, pat, slap, bonk, kick, poke, yeet, highfive, wave, laugh, and cry.",
     slashExample: "/social action:hug user:@friend  •  /social action:laugh",
-    prefixExample: "!hug @friend  •  !pat @friend  •  !laugh  •  !cry",
-    notes: "10 actions (!hug, !pat, !slap, !bonk, !poke, !yeet, !highfive, !wave, !laugh, !cry) • 3s cooldown",
+    prefixExample: "!hug @friend  •  !kick @friend  •  !laugh  •  !cry",
+    notes: "11 actions (!hug, !pat, !slap, !bonk, !kick, !poke, !yeet, !highfive, !wave, !laugh, !cry) • 3s cooldown",
   },
 
   // AI
@@ -216,6 +175,18 @@ export const COMMANDS: CommandEntry[] = [
 
   // UTILITY
   {
+    id: "weather",
+    name: "BMKG Indonesia Weather",
+    category: "Utility",
+    slashCommand: "/weather",
+    prefixCommand: "!weather",
+    description:
+      "Check live official BMKG weather forecasts for Indonesian cities, districts, villages, or ADM4 codes with 3-hour outlook.",
+    slashExample: "/weather location:Kemayoran, Jakarta",
+    prefixExample: "!weather Jakarta  •  !cuaca Bandung  •  !weather 31.71.03.1001",
+    notes: "Prefix alias: !cuaca • Data resmi BMKG Indonesia • 5s cooldown",
+  },
+  {
     id: "math",
     name: "Safe Math Evaluator",
     category: "Utility",
@@ -228,83 +199,62 @@ export const COMMANDS: CommandEntry[] = [
     notes: "Max 250 characters • Custom sandboxed parser (no eval)",
   },
   {
+    id: "autorole",
+    name: "Auto Role",
+    category: "Utility",
+    slashCommand: "/autorole",
+    prefixCommand: null,
+    description:
+      "Configure automatic roles assigned by Midwave when new members join your Discord server (Administrator only).",
+    slashExample: "/autorole action:add role:@Member  •  /autorole action:list",
+    prefixExample: null,
+    notes: "Slash-only • Requires Administrator (member) & Manage Roles (bot)",
+  },
+  {
     id: "help",
-    name: "Help",
+    name: "Command Guide",
     category: "Utility",
     slashCommand: "/help",
-    prefixCommand: "!help",
+    prefixCommand: "!menu",
     description:
-      "Display bot usage instructions, available commands, and multiplayer match rules.",
+      "Display the interactive Midwave Command Guide with categorized slash and prefix commands.",
     slashExample: "/help",
-    prefixExample: "!help",
+    prefixExample: "!menu",
+    notes: "Prefix command changed from !help to !menu",
   },
   {
-    id: "games",
-    name: "Games Directory",
+    id: "feedback",
+    name: "Feedback & Bug Reports",
     category: "Utility",
-    slashCommand: "/game list",
-    prefixCommand: "!games",
+    slashCommand: null,
+    prefixCommand: "!feedback",
     description:
-      "List all seven interactive mini-games along with their Solo and Multiplayer commands.",
-    slashExample: "/game list",
-    prefixExample: "!games",
+      "Submit bug reports, feature suggestions, or issues via an interactive Discord modal directly to the Midwave staff channel.",
+    slashExample: null,
+    prefixExample: "!feedback",
+    notes: "Prefix-only • Supports category selection & optional screenshot attachment",
   },
   {
-    id: "game-status",
-    name: "Game Status",
+    id: "donate",
+    name: "Support Midwave",
     category: "Utility",
-    slashCommand: "/game status",
-    prefixCommand: "!game status",
+    slashCommand: "/donate",
+    prefixCommand: "!donate",
     description:
-      "Inspect your currently active match or outgoing pending multiplayer invite.",
-    slashExample: "/game status",
-    prefixExample: "!game status",
-  },
-  {
-    id: "game-cancel",
-    name: "Game Cancel",
-    category: "Utility",
-    slashCommand: "/game cancel",
-    prefixCommand: "!game cancel",
-    description:
-      "Cancel your active game session or withdraw an outgoing multiplayer challenge.",
-    slashExample: "/game cancel",
-    prefixExample: "!game cancel",
-  },
-  {
-    id: "invite-accept",
-    name: "Accept Invite",
-    category: "Utility",
-    slashCommand: "/invite accept",
-    prefixCommand: "!invite accept",
-    description:
-      "Accept the latest pending 1v1 multiplayer challenge sent to you.",
-    slashExample: "/invite accept",
-    prefixExample: "!invite accept",
-    notes: "Prefix aliases: !invite acc, !invite yes • Invites expire after 60s",
-  },
-  {
-    id: "invite-decline",
-    name: "Decline Invite",
-    category: "Utility",
-    slashCommand: "/invite decline",
-    prefixCommand: "!invite decline",
-    description:
-      "Decline an incoming multiplayer challenge cleanly.",
-    slashExample: "/invite decline",
-    prefixExample: "!invite decline",
-    notes: "Prefix aliases: !invite dec, !invite no",
+      "Support Midwave development cleanly via Saweria or Ko-fi link buttons.",
+    slashExample: "/donate",
+    prefixExample: "!donate",
   },
   {
     id: "knowledge",
     name: "Bot Knowledge Manager",
     category: "Utility",
-    slashCommand: "/knowledge",
-    prefixCommand: null,
+    slashCommand: null,
+    prefixCommand: "!knowledge",
     description:
       "Search, list, add, update, or remove entries in Midwave's Global Bot Knowledge base.",
-    slashExample: "/knowledge categories  •  /knowledge search query:games",
-    prefixExample: null,
-    notes: "Slash-only • Strictly gated to authorized bot owners / administrators",
+    slashExample: null,
+    prefixExample: "!knowledge categories  •  !knowledge search games",
+    notes: "Prefix-only • Restricted to authorized bot owners / administrators",
   },
 ];

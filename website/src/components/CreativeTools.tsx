@@ -150,7 +150,7 @@ export function CreativeTools() {
 
               <div className="border border-white/80 bg-[#141414] p-4 space-y-2">
                 <p className="font-sans text-sm text-white leading-relaxed">
-                  reply any message with !qc or right-click → Apps → Generate QC
+                  reply any message with !qc or run /media qc text:...
                 </p>
                 <div className="flex items-center justify-end gap-2 font-mono text-[10px] text-[#888888]">
                   <span>21:30</span>
@@ -176,13 +176,13 @@ export function CreativeTools() {
             QUOTED CHAT (QC)
           </h3>
           <p className="text-[#888888] text-sm sm:text-base leading-relaxed">
-            Turn any text or Discord message into a crisp WhatsApp-style Quoted
-            Chat screenshot PNG.
+            Turn any text or replied Discord message into a crisp WhatsApp-style
+            Quoted Chat screenshot PNG.
           </p>
 
           <ul className="space-y-2 font-mono text-xs text-[#888888] border-t border-dotted border-[#252525] pt-4">
             <li>• Dynamic 1080px-wide canvas (1080–4096px tall)</li>
-            <li>• Works via text input, message reply, or Context Menu</li>
+            <li>• Works via text input or replying to any message with !qc</li>
             <li>• Local 3D iOS-style emoji assets &amp; Asia/Jakarta timestamps</li>
             <li>• Supports up to 2,000 characters cleanly</li>
           </ul>
@@ -194,26 +194,23 @@ export function CreativeTools() {
             <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-white">
               !qc
             </code>
-            <code className="px-3 py-1.5 bg-[#101010] border border-[#252525] font-mono text-xs text-[#cccccc]">
-              Apps → Generate QC
-            </code>
           </div>
         </div>
       </div>
 
-      {/* Media, Social & Utilities Grid */}
+      {/* Media, Weather, Social & Utilities Grid */}
       <div className="pt-16 mt-16 border-t border-dotted border-[#252525]">
         <div className="space-y-2 mb-8">
           <div className="font-mono text-xs text-[#666666] uppercase tracking-widest">
-            PLUS // MEDIA, SOCIAL &amp; UTILITIES
+            PLUS // MEDIA, WEATHER, SOCIAL &amp; UTILITIES
           </div>
           <h3 className="font-display text-xl sm:text-2xl text-white uppercase">
             BEYOND IMAGE GENERATION.
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-[#252525] divide-y md:divide-y-0 md:divide-x divide-dotted divide-[#252525] bg-[#050505]">
-          <div className="p-6 space-y-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#252525] bg-[#050505]">
+          <div className="p-6 space-y-3 border-b md:border-r border-dotted border-[#252525]">
             <div className="font-mono text-[11px] text-[#666666] uppercase">
               01 // MEDIA DOWNLOADER
             </div>
@@ -234,7 +231,7 @@ export function CreativeTools() {
             </div>
           </div>
 
-          <div className="p-6 space-y-3">
+          <div className="p-6 space-y-3 border-b lg:border-r border-dotted border-[#252525]">
             <div className="font-mono text-[11px] text-[#666666] uppercase">
               02 // LYRICS FINDER
             </div>
@@ -255,9 +252,30 @@ export function CreativeTools() {
             </div>
           </div>
 
-          <div className="p-6 space-y-3">
+          <div className="p-6 space-y-3 border-b md:border-r lg:border-r-0 border-dotted border-[#252525]">
             <div className="font-mono text-[11px] text-[#666666] uppercase">
-              03 // SAFE CALCULATOR
+              03 // BMKG OPEN DATA
+            </div>
+            <h4 className="font-display text-base text-white uppercase">
+              INDONESIA WEATHER
+            </h4>
+            <p className="text-xs text-[#888888] leading-relaxed">
+              Check live BMKG weather forecasts for Indonesian cities, districts,
+              villages, or ADM4 codes with 3-hour outlook.
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                /weather
+              </code>
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                !weather
+              </code>
+            </div>
+          </div>
+
+          <div className="p-6 space-y-3 border-b lg:border-b-0 lg:border-r border-dotted border-[#252525]">
+            <div className="font-mono text-[11px] text-[#666666] uppercase">
+              04 // SAFE CALCULATOR
             </div>
             <h4 className="font-display text-base text-white uppercase">
               MATH EVALUATOR
@@ -276,16 +294,16 @@ export function CreativeTools() {
             </div>
           </div>
 
-          <div className="p-6 space-y-3">
+          <div className="p-6 space-y-3 border-b md:border-b-0 md:border-r border-dotted border-[#252525]">
             <div className="font-mono text-[11px] text-[#666666] uppercase">
-              04 // OTAKUGIFS API
+              05 // ANIME EXPRESSIONS
             </div>
             <h4 className="font-display text-base text-white uppercase">
-              10 SOCIAL GIFS
+              11 SOCIAL GIFS
             </h4>
             <p className="text-xs text-[#888888] leading-relaxed">
-              Expressive anime GIF interactions: hug, pat, slap, bonk, poke,
-              yeet, highfive, wave, laugh, and cry.
+              Expressive anime GIF interactions: hug, pat, slap, bonk, kick,
+              poke, yeet, highfive, wave, laugh, and cry.
             </p>
             <div className="flex flex-wrap gap-1.5 pt-1">
               <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
@@ -293,6 +311,27 @@ export function CreativeTools() {
               </code>
               <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
                 !hug
+              </code>
+            </div>
+          </div>
+
+          <div className="p-6 space-y-3">
+            <div className="font-mono text-[11px] text-[#666666] uppercase">
+              06 // SERVER ONBOARDING
+            </div>
+            <h4 className="font-display text-base text-white uppercase">
+              AUTO ROLE &amp; WELCOME
+            </h4>
+            <p className="text-xs text-[#888888] leading-relaxed">
+              Automatically greets new servers on join and assigns configured
+              member roles via /autorole (Administrator).
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                /autorole
+              </code>
+              <code className="px-2 py-1 bg-[#101010] border border-[#252525] font-mono text-[11px] text-white">
+                !feedback
               </code>
             </div>
           </div>

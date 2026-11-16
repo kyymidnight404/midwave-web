@@ -5,17 +5,17 @@ const STEPS = [
   {
     num: "01",
     title: "INVITE",
-    desc: "Add Midwave to your Discord server via the Discord OAuth2 authorization link.",
+    desc: "Add Midwave to your Discord server; the bot greets your channel automatically with a welcome embed.",
   },
   {
     num: "02",
     title: "AUTHORIZE",
-    desc: "Grant the required bot and applications.commands scopes along with channel permissions.",
+    desc: "Grant bot and applications.commands scopes along with channel & optional Auto Role permissions.",
   },
   {
     num: "03",
     title: "EXPLORE",
-    desc: "Run /help or /games in any permitted channel to start playing, generating, or asking.",
+    desc: "Run /help or !menu in any permitted channel to explore weather, games, media tools, and AI.",
   },
 ] as const;
 

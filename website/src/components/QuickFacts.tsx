@@ -1,8 +1,8 @@
 const FACTS = [
-  { value: "07", label: "MINI GAMES" },
+  { value: "04", label: "MINI GAMES" },
   { value: "03", label: "IMAGE GENERATORS" },
-  { value: "10", label: "SOCIAL GIF ACTIONS" },
-  { value: "01", label: "GEMINI AI + SEARCH" },
+  { value: "11", label: "SOCIAL GIF ACTIONS" },
+  { value: "01", label: "GEMINI AI + BMKG" },
 ] as const;
 
 export function QuickFacts() {

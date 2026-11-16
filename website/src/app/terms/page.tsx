@@ -33,7 +33,7 @@ export default function TermsPage() {
 
           <section className="space-y-3">
             <h2 className="font-display text-lg text-white uppercase">
-              01. ACCEPTANCE & DISCORD PLATFORM
+              01. ACCEPTANCE &amp; DISCORD PLATFORM
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
               By inviting or interacting with the Midwave Discord bot, you agree
@@ -46,27 +46,27 @@ export default function TermsPage() {
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              02. BOT FUNCTIONALITY & IN-MEMORY SESSIONS
+              02. BOT FUNCTIONALITY &amp; ZERO VIRTUAL ECONOMY
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              Midwave provides seven interactive mini-games, two image-generation
-              utilities (/brat and !igf), and a stateless AI assistant (/ai and
-              !ai). All active game sessions and pending multiplayer invitations
-              are stored temporarily in server memory (RAM) and expire
-              automatically or when the bot restarts. Midwave does not provide
-              user accounts, virtual economies, or paid subscriptions.
+              Midwave provides four interactive mini-games, three image-generation
+              utilities (/media brat, /media qc / !qc, and !igf), BMKG Indonesia
+              weather forecasts (/weather / !weather), media &amp; social utilities,
+              Auto Role (/autorole), feedback (!feedback), and a Gemini AI
+              assistant (/ai and !ai). Midwave does not provide user profiles,
+              score leaderboards, virtual economies, or paid subscriptions.
             </p>
           </section>
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              03. IMAGE GENERATION & AI USAGE
+              03. IMAGE GENERATION &amp; AI USAGE
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              You are responsible for any text prompts you submit to /brat,
-              !igf, /ai, or !ai. Do not use Midwave to generate abusive,
-              unlawful, or harassing content. AI requests are forwarded
-              independently to the Google Gemini API and are subject to per-user
+              You are responsible for any text prompts you submit to /media brat,
+              /media qc, !igf, /ai, !ai, or !feedback. Do not use Midwave to
+              generate abusive, unlawful, or harassing content. AI requests are
+              forwarded to the Google Gemini API and are subject to per-user
               cooldowns (8 seconds), character limits (1,500 characters), and
               upstream API rate limits.
             </p>
@@ -74,21 +74,21 @@ export default function TermsPage() {
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              04. SERVICE LIMITATIONS & THIRD-PARTY DEPENDENCIES
+              04. SERVICE LIMITATIONS &amp; THIRD-PARTY DEPENDENCIES
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
               Midwave is provided on an &ldquo;as-is&rdquo; and
               &ldquo;as-available&rdquo; basis without uptime guarantees.
-              Availability depends on Discord&apos;s gateway and API, hosting
-              infrastructure, and Google Gemini API availability. Features may
-              be updated, rate-limited, or temporarily unavailable during
-              maintenance.
+              Availability depends on Discord&apos;s gateway and API, BMKG open
+              weather data, media/GIF providers, and Google Gemini API
+              availability. Features may be updated, rate-limited, or temporarily
+              unavailable during maintenance.
             </p>
           </section>
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              05. OPERATOR & SUPPORT CONTACT
+              05. OPERATOR &amp; SUPPORT CONTACT
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
               Midwave is maintained by{" "}

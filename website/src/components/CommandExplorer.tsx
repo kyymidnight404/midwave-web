@@ -81,7 +81,7 @@ export function CommandExplorer() {
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search commands (e.g. /game, /media, brat, qc, !dl, math, hug, ai)..."
+              placeholder="Search commands (e.g. /weather, /media, !menu, !ttt, !quiz, brat, qc, !dl, math, ai)..."
               aria-label="Search commands"
               className="w-full bg-[#050505] border border-[#252525] focus:border-white pl-10 pr-4 py-2.5 font-mono text-xs text-white placeholder:text-[#666666] outline-none"
             />

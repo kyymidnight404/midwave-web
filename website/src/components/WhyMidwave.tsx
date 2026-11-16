@@ -25,19 +25,19 @@ export function WhyMidwave() {
             WHY AND HOW?
           </h2>
           <p className="text-white text-base sm:text-lg leading-relaxed">
-            Midwave brings interactive entertainment, creative expression, and
-            AI assistance into one Discord experience.
+            Midwave brings interactive entertainment, creative expression, BMKG
+            weather updates, and AI assistance into one Discord experience.
           </p>
           <div className="space-y-4 text-sm sm:text-base text-[#888888] leading-relaxed">
             <p>
               Instead of cluttering servers with separate bots for mini-games,
-              meme utilities, and quick AI lookups, Midwave unifies all three
-              inside a single modular Node.js and discord.js architecture.
+              meme utilities, weather, and quick AI lookups, Midwave unifies all
+              of them inside a modular Node.js and discord.js architecture.
             </p>
             <p>
-              Every game engine runs cleanly in memory with automatic session
-              expiration, zero database overhead, and support for both Slash
-              Commands and Prefix Commands.
+              Games run purely for fun with interactive buttons, zero player
+              points or leaderboards, RAM-only AI memory, and support for both
+              Slash Commands and Prefix Commands.
             </p>
           </div>
         </div>

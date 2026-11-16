@@ -3,17 +3,17 @@ export function Multiplayer() {
     {
       num: "01",
       title: "CHALLENGE",
-      desc: "Send a 1v1 game invitation to any server member using a slash or prefix command.",
+      desc: "Send a 1v1 challenge with !coinflip @user, !rps @user, or !ttt @user — or start !quiz for instant drop-in play.",
     },
     {
       num: "02",
-      title: "ACCEPT",
-      desc: "The opponent accepts or declines within 60 seconds using /invite accept or /invite decline.",
+      title: "RESPOND",
+      desc: "Opponents respond directly using interactive Accept / Reject (Terima / Tolak) buttons within 60 seconds.",
     },
     {
       num: "03",
       title: "PLAY",
-      desc: "Compete turn-by-turn inside the channel until a winner or draw is declared.",
+      desc: "Play using secret/grid buttons or direct chat answers (a/b/c/d) with zero points or score clutter.",
     },
   ];
 
@@ -27,11 +27,11 @@ export function Multiplayer() {
           [ 03 // 1V1 MULTIPLAYER ]
         </span>
         <h2 className="font-display text-2xl sm:text-4xl text-white uppercase tracking-tight">
-          PLAY TOGETHER. COMPETE DIRECTLY.
+          PLAY TOGETHER. CLICK &amp; COMPETE.
         </h2>
         <p className="text-[#888888] text-sm sm:text-base max-w-2xl">
-          Challenge another Discord user, accept invitations, take turns, and
-          discover who wins.
+          Challenge a friend with button invites, pick moves interactively, and
+          enjoy clean match summaries without points or leaderboards.
         </p>
       </div>
 
@@ -52,24 +52,24 @@ export function Multiplayer() {
         {/* Preview 1: Match Invitation */}
         <div className="border border-[#252525] bg-[#101010] p-5 space-y-4">
           <div className="font-mono text-[11px] text-[#666666] uppercase tracking-wider">
-            PREVIEW 01 // MATCH INVITATION
+            PREVIEW 01 // BUTTON INVITATION
           </div>
           <div className="border-l-2 border-white bg-[#050505] p-4 space-y-3">
             <div className="flex items-center justify-between font-mono text-xs">
-              <span className="text-white font-semibold">MIDWAVE BOT</span>
+              <span className="text-white font-semibold">COIN FLIP</span>
               <span className="text-[#666666]">TTL: 60s</span>
             </div>
             <p className="text-xs text-[#888888] leading-relaxed">
-              <span className="text-white">@player_one</span> challenged{" "}
-              <span className="text-white">@player_two</span> to{" "}
-              <span className="text-white">TIC TAC TOE</span>.
+              <span className="text-white">Menunggu Konfirmasi</span> —{" "}
+              <span className="text-white">@player_one</span> menantang{" "}
+              <span className="text-white">@player_two</span>.
             </p>
             <div className="flex gap-2 pt-1 font-mono text-[11px]">
               <span className="px-2.5 py-1 bg-white text-[#050505] font-semibold">
-                /invite accept
+                ✅ Accept
               </span>
               <span className="px-2.5 py-1 border border-[#252525] text-[#888888]">
-                /invite decline
+                ❌ Reject
               </span>
             </div>
           </div>
@@ -78,19 +78,19 @@ export function Multiplayer() {
         {/* Preview 2: Active Game Board */}
         <div className="border border-[#252525] bg-[#101010] p-5 space-y-4">
           <div className="font-mono text-[11px] text-[#666666] uppercase tracking-wider">
-            PREVIEW 02 // GAME BOARD
+            PREVIEW 02 // INTERACTIVE 3×3 BOARD
           </div>
           <div className="border-l-2 border-white bg-[#050505] p-4 space-y-3">
             <div className="flex items-center justify-between font-mono text-xs">
-              <span className="text-white font-semibold">TIC TAC TOE (3×3)</span>
+              <span className="text-white font-semibold">TIC TAC TOE (FRIENDS ONLY)</span>
               <span className="text-[#888888]">TURN: X</span>
             </div>
             <div className="grid grid-cols-3 gap-1.5 max-w-[168px] font-mono text-xs">
-              {["X", "O", "A3", "B1", "X", "B3", "O", "C2", "C3"].map((cell) => {
+              {["X", "O", "⬜", "⬜", "X", "⬜", "O", "⬜", "⬜"].map((cell, idx) => {
                 const isOccupied = cell === "X" || cell === "O";
                 return (
                   <div
-                    key={cell}
+                    key={idx}
                     className={`h-10 border flex items-center justify-center ${
                       isOccupied
                         ? "border-white text-white bg-[#101010] font-bold"
@@ -103,7 +103,7 @@ export function Multiplayer() {
               })}
             </div>
             <div className="font-mono text-[11px] text-[#666666]">
-              CMD: /tictactoe move position:C3
+              CMD: !ttt @friend (click grid buttons)
             </div>
           </div>
         </div>
@@ -115,15 +115,14 @@ export function Multiplayer() {
           </div>
           <div className="border-l-2 border-white bg-[#050505] p-4 space-y-3">
             <div className="flex items-center justify-between font-mono text-xs">
-              <span className="text-white font-semibold">MATCH COMPLETE</span>
-              <span className="text-[#666666]">IN-MEMORY</span>
+              <span className="text-white font-semibold">HASIL AKHIR</span>
+              <span className="text-[#666666]">ZERO POINTS</span>
             </div>
             <p className="text-xs text-[#888888] leading-relaxed">
-              Winner: <span className="text-white">@player_one</span> completed
-              diagonal line <span className="text-white">A1 → B2 → C3</span>.
+              Pemenang: <span className="text-white">@player_one</span> (❌)!
             </p>
             <div className="border-t border-dotted border-[#252525] pt-2 font-mono text-[11px] text-[#666666]">
-              Session disposed cleanly • Zero persistent storage
+              No points awarded • No global profile saved
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy explaining Midwave's zero-database architecture, in-memory sessions, and stateless Gemini AI requests.",
+    "Privacy Policy explaining Midwave's zero-point gameplay, RAM-only AI memory, and minimal local session storage.",
 };
 
 export default function PrivacyPage() {
@@ -33,58 +33,60 @@ export default function PrivacyPage() {
 
           <section className="space-y-3">
             <h2 className="font-display text-lg text-white uppercase">
-              01. ZERO PERSISTENT USER PROFILE STORAGE
+              01. ZERO PLAYER PROFILES, POINTS, OR CHAT ARCHIVES
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              Midwave does not use a database and does not store persistent user
-              profiles, message archives, or cross-session analytics. This
-              public website also operates without user authentication,
-              accounts, or tracking databases.
+              Midwave does not store persistent player profiles, score points,
+              leaderboards, or Discord message archives. This public website
+              also operates without user authentication, accounts, or tracking
+              databases.
             </p>
           </section>
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              02. TEMPORARY IN-MEMORY GAME SESSIONS
+              02. ACTIVE SESSIONS &amp; SERVER CONFIG
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              When you start a game or send a multiplayer challenge, Midwave
-              temporarily holds your Discord user ID, channel ID, and current
-              match state inside in-memory JavaScript Map structures. Pending
-              invitations expire after 60 seconds, idle sessions expire after
-              120 seconds, and all in-memory state is cleared on bot restart.
+              During interactive button games (Tic Tac Toe, Rock Paper Scissors,
+              Quiz Battle, and Coin Flip), Midwave temporarily holds active
+              session state with automatic TTL expiration. Server Auto Role
+              entries store only the guild ID and configured role IDs via
+              /autorole.
             </p>
           </section>
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              03. CREATIVE IMAGE GENERATION (/BRAT & !IGF)
+              03. CREATIVE IMAGE GENERATION &amp; BMKG WEATHER
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              Text submitted to /brat or !brat and Discord avatar/display name
-              data used by !igf are rendered into PNG buffers directly in memory
-              and returned immediately to Discord. Midwave does not save
-              generated images to disk or external cloud buckets.
+              Text submitted to /media brat, /media qc, !qc, or avatar/image data
+              for !igf are rendered into PNG buffers in memory and returned
+              immediately without saving user uploads to disk. Location queries
+              for /weather or !weather are resolved to Indonesian ADM4 codes and
+              fetched directly from BMKG without storing personal location
+              history.
             </p>
           </section>
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              04. GOOGLE GEMINI AI PROCESSING (/AI & !AI)
+              04. GOOGLE GEMINI AI PROCESSING (/AI &amp; !AI)
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              Prompts sent to /ai or !ai are transmitted independently to the
-              Google Gemini API to generate a response. Midwave is strictly
-              stateless and does not retain conversation history across prompts.
+              Midwave AI keeps only short-term RAM conversation context (up to
+              10 messages with a 15-minute idle TTL) and never writes chat logs
+              to a database. Prompts are sent to the Google Gemini API (and
+              selectively to Tavily Web Search when real-time lookup is needed).
               Do not include passwords, tokens, or sensitive personal data in
-              AI prompts, as requests are processed by Google&apos;s Gemini API
-              under their applicable terms and policies.
+              prompts.
             </p>
           </section>
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              05. CONTACT & DATA QUESTIONS
+              05. CONTACT &amp; DATA QUESTIONS
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
               For privacy questions or inquiries about how Midwave processes

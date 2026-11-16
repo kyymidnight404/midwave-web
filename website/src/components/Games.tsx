@@ -22,8 +22,8 @@ export function Games() {
           INTERACTIVE GAMES.
         </h2>
         <p className="text-[#888888] text-sm sm:text-base max-w-2xl">
-          Challenge yourself or compete with friends through seven interactive
-          mini-games directly inside Discord.
+          Play solo or challenge friends with interactive buttons and zero
+          points through four mini-games inside Discord.
         </p>
       </div>
 

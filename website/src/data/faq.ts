@@ -9,37 +9,37 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "what-is-midwave",
     question: "What is Midwave?",
     answer:
-      "Midwave is a multifunctional Discord entertainment bot built with Node.js and discord.js. It combines seven interactive mini-games (Solo and 1v1 Multiplayer), three creative image generators (Brat, Quoted Chat QC, and Instagram Post Frame), Instagram/TikTok media downloading, a Lyrics Finder, a Safe Math evaluator, 10 social anime GIF actions, and contextual Google Gemini AI with selective Tavily Web Search.",
+      "Midwave is a multifunctional Discord entertainment bot built with Node.js and discord.js. It combines four interactive mini-games, three creative image generators (Brat, Quoted Chat QC, and Instagram Post Frame), official BMKG Indonesia weather forecasts, Instagram/TikTok media downloading, a Lyrics Finder, a Safe Math evaluator, 11 social anime GIF actions, Auto Role management, and contextual Google Gemini AI with selective Tavily Web Search.",
   },
   {
     id: "is-midwave-free",
     question: "Is Midwave free?",
     answer:
-      "Yes. Midwave is free to invite and use in Discord servers, with no paywalls, subscriptions, or virtual economy system. Usage cooldowns and rate limits apply to keep image generation and Gemini AI requests responsive for everyone.",
+      "Yes. Midwave is free to invite and use in Discord servers, with no paywalls, subscriptions, or virtual economy system. Optional support via /donate (!donate) helps cover hosting, and cooldowns keep image generation, BMKG weather lookups, and Gemini AI responsive.",
   },
   {
     id: "how-to-invite",
     question: "How do I invite Midwave?",
     answer:
-      "Click the Add to Discord button to open the Discord OAuth2 authorization screen, select your server, and grant the bot and applications.commands scopes along with View Channels, Send Messages, Embed Links, Attach Files, and Read Message History permissions.",
+      "Click the Add to Discord button to open Discord OAuth2 authorization, select your server, and grant the bot and applications.commands scopes. When Midwave joins a new server, it automatically sends a welcome embed with a quick-start guide (!menu / /help) to the first available channel.",
   },
   {
     id: "multiplayer-support",
     question: "Does Midwave support multiplayer?",
     answer:
-      "Yes. All seven mini-games support both Solo mode and 1v1 Multiplayer challenges. You can challenge another member with a command, let them accept or decline via /invite accept or /invite decline within 60 seconds, and play turn-by-turn directly inside the channel.",
+      "Yes. Coin Flip and Rock Paper Scissors support both Solo and 1v1 Multiplayer using Accept/Reject and secret choice buttons. Tic Tac Toe (!ttt @user) is strictly for 1v1 friend matches (no bots/AI), and Quiz Battle (!quiz) lets anyone in the channel drop in anytime by typing a, b, c, or d directly in chat.",
   },
   {
     id: "save-game-data",
-    question: "Does Midwave save game data?",
+    question: "Does Midwave track points, profiles, or leaderboards?",
     answer:
-      "No. Midwave uses zero databases and stores no persistent user profiles, leaderboards, or match histories. Active game sessions and pending invitations exist strictly in temporary in-memory JavaScript Map structures with automatic TTL expiration.",
+      "No. Midwave stores zero user profiles, zero leaderboards, and zero match points or reward bonuses. SQLite is used only to persist active interactive button sessions, Indonesian quiz questions, and /autorole guild configurations—never player scores or AI chat history.",
   },
   {
-    id: "bot-restarts",
-    question: "What happens when the bot restarts?",
+    id: "weather-bmkg",
+    question: "How does the Weather command work?",
     answer:
-      "Because all active matches and pending invites live purely in RAM, any ongoing sessions are cleared cleanly when the bot restarts. You can immediately start a fresh match once the bot comes back online.",
+      "Run /weather <location> or !weather <location> (alias !cuaca) with any Indonesian city, regency, sub-district, village, or ADM4 code (e.g., Jakarta, Kemayoran, Bandung, Surabaya). Midwave resolves the location to an official BMKG ADM4 code and returns current temperature, humidity, wind, cloud cover, and the next 3-hour intervals directly from BMKG.",
   },
   {
     id: "ai-memory",
@@ -51,12 +51,12 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "prefix-commands",
     question: "How do I use prefix commands?",
     answer:
-      "In addition to Discord Slash Commands (/), Midwave supports prefix commands using ! by default (for example: !games, !brat hello, !qc text, !igf, !dl <url>, !lyrics <song>, !math 2+2, !hug @user, !ai question, !ttt, !c4). For secret multiplayer choices in prefix mode, Midwave attempts to delete your message if Manage Messages is granted and confirms via DM.",
+      "In addition to Discord Slash Commands (/), Midwave supports prefix commands using ! by default (for example: !menu, !weather Jakarta, !brat hello, !qc text, !igf, !dl <url>, !lyrics <song>, !math 2+2, !hug @user, !ai question, !cf, !rps, !ttt @user, !quiz). Quiz answers (a/b/c/d) work directly in chat without any prefix.",
   },
   {
     id: "command-not-working",
     question: "Why is a command not working?",
     answer:
-      "First, check that Midwave has View Channels, Send Messages, Embed Links, and Attach Files permissions in the target channel. If slash commands do not appear, confirm the bot was invited with the applications.commands scope. For prefix commands (!), the bot requires Message Content Intent enabled on its application.",
+      "First, check that Midwave has View Channels, Send Messages, Embed Links, Attach Files, Read Message History, and Add Reactions permissions in the target channel (plus Manage Roles for /autorole). If slash commands do not appear, confirm the bot was invited with the applications.commands scope, and ensure Message Content Intent & Server Members Intent are enabled for prefix commands and Auto Role.",
   },
 ];
