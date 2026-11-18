@@ -33,7 +33,7 @@ export default function PrivacyPage() {
 
           <section className="space-y-3">
             <h2 className="font-display text-lg text-white uppercase">
-              01. ZERO PLAYER PROFILES, POINTS, OR CHAT ARCHIVES
+              01. WEBSITE ACCOUNTS & BOT DATA
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
               The public website does not require user accounts or authentication.
