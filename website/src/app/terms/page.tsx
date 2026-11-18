@@ -49,12 +49,14 @@ export default function TermsPage() {
               02. BOT FUNCTIONALITY &amp; ZERO VIRTUAL ECONOMY
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              Midwave provides four interactive mini-games, three image-generation
-              utilities (/media brat, /media qc / !qc, and !igf), BMKG Indonesia
-              weather forecasts (/weather / !weather), media &amp; social utilities,
-              Auto Role (/autorole), feedback (!feedback), and a Gemini AI
-              assistant (/ai and !ai). Midwave does not provide user profiles,
-              score leaderboards, virtual economies, or paid subscriptions.
+              Midwave provides interactive mini-games and Game Center, image
+              generation utilities (/media brat, /media qc / !qc, and !igf),
+              BMKG Indonesia weather forecasts (/weather / !weather), public
+              Instagram and TikTok media downloading, lyrics lookup, Auto Role
+              (/autorole), feedback (!feedback), and a Gemini AI assistant
+              (/ai and !ai). Game Center session and participant records may be
+              persisted in the bot's SQLite database. Midwave does not provide
+              a virtual economy or paid subscriptions.
             </p>
           </section>
 
@@ -80,9 +82,11 @@ export default function TermsPage() {
               Midwave is provided on an &ldquo;as-is&rdquo; and
               &ldquo;as-available&rdquo; basis without uptime guarantees.
               Availability depends on Discord&apos;s gateway and API, BMKG open
-              weather data, media/GIF providers, and Google Gemini API
-              availability. Features may be updated, rate-limited, or temporarily
-              unavailable during maintenance.
+              weather data, RapidAPI and supported media platforms, LRCLIB,
+              iTunes, optional Genius API, GIF providers, Google Gemini, and
+              Tavily Search. Requests sent to these services are subject to
+              their own terms and privacy policies. Features may be updated,
+              rate-limited, or temporarily unavailable during maintenance.
             </p>
           </section>
 
