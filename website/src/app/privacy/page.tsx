@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy explaining Midwave's zero-point gameplay, RAM-only AI memory, and minimal local session storage.",
+    "Privacy Policy explaining Midwave's Game Center records, temporary AI context, and third-party service processing.",
 };
 
 export default function PrivacyPage() {
@@ -36,10 +36,10 @@ export default function PrivacyPage() {
               01. ZERO PLAYER PROFILES, POINTS, OR CHAT ARCHIVES
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              Midwave does not store persistent player profiles, score points,
-              leaderboards, or Discord message archives. This public website
-              also operates without user authentication, accounts, or tracking
-              databases.
+              The public website does not require user accounts or authentication.
+              The Discord bot does not archive general Discord messages, but it
+              does persist Game Center session and participant records in its
+              SQLite database. These records are described below.
             </p>
           </section>
 
@@ -48,11 +48,14 @@ export default function PrivacyPage() {
               02. ACTIVE SESSIONS &amp; SERVER CONFIG
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              During interactive button games (Tic Tac Toe, Rock Paper Scissors,
-              Quiz Battle, and Coin Flip), Midwave temporarily holds active
-              session state with automatic TTL expiration. Server Auto Role
-              entries store only the guild ID and configured role IDs via
-              /autorole.
+              Game Center stores session IDs, guild/channel/message IDs, game
+              type and status, host/turn/winner IDs, serialized game state, and
+              timestamps in SQLite. Participant rows can include Discord user
+              IDs, usernames, roles, scores, outcomes, and join timestamps.
+              Session timers can mark a session expired or finished; expiration
+              does not itself delete the database rows. No automatic database
+              purge period is currently configured in the session service.
+              /autorole stores the server (guild) ID and configured role IDs.
             </p>
           </section>
 
@@ -75,18 +78,35 @@ export default function PrivacyPage() {
               04. GOOGLE GEMINI AI PROCESSING (/AI &amp; !AI)
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
-              Midwave AI keeps only short-term RAM conversation context (up to
-              10 messages with a 15-minute idle TTL) and never writes chat logs
-              to a database. Prompts are sent to the Google Gemini API (and
-              selectively to Tavily Web Search when real-time lookup is needed).
-              Do not include passwords, tokens, or sensitive personal data in
-              prompts.
+              Midwave AI keeps short-term conversation context in RAM (up to
+              10 messages with a 15-minute idle TTL); this context is not stored
+              by the AI context store in the bot's SQLite database. Prompts and
+              relevant context are sent to Google Gemini to generate responses.
+              When web search is used, a normalized search query is sent to
+              Tavily; conversation history and Discord user IDs are not sent to
+              Tavily. Do not include passwords, tokens, or sensitive personal
+              data in prompts.
             </p>
           </section>
 
           <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
             <h2 className="font-display text-lg text-white uppercase">
-              05. CONTACT &amp; DATA QUESTIONS
+              05. MEDIA, LYRICS &amp; OTHER THIRD-PARTY SERVICES
+            </h2>
+            <p className="text-sm text-[#888888] leading-relaxed">
+              Public Instagram and TikTok links submitted to the downloader are
+              processed through RapidAPI to retrieve media. Lyrics searches may
+              send the requested song title and artist to LRCLIB and, where
+              applicable, iTunes or the optional Genius API for lyrics or
+              metadata. Weather lookups send the selected Indonesian location
+              code to BMKG. These providers process requests under their own
+              policies. Do not submit private URLs or sensitive information.
+            </p>
+          </section>
+
+          <section className="space-y-3 border-t border-dotted border-[#252525] pt-8">
+            <h2 className="font-display text-lg text-white uppercase">
+              06. CONTACT &amp; DATA QUESTIONS
             </h2>
             <p className="text-sm text-[#888888] leading-relaxed">
               For privacy questions or inquiries about how Midwave processes
